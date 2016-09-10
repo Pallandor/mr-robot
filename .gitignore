@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+.DS_Store
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+
+# Build directory
+dist
+
+# Editor temporary files
+*~
+\#*#
+.#*
+*.orig
+*.rej
+
+# OS metadata
+.DS_Store
+Thumbs.db
