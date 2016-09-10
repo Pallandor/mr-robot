@@ -23,6 +23,12 @@ mongoose.connection.on('error', () => {
   process.exit(1);
 });
 
+/** Express Routers **/
+const apiRouter = require('./routers/api');
+
+/** Install Express Routers **/
+app.use('/api', apiRouter);
+
 /** Start Server **/
 app.listen(PORT, (err) => {
   if (err) {
