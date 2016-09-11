@@ -8,7 +8,7 @@ const Robot = require('../server/models/Robot');
 
 exports.connectDB = () =>
   new Promise((resolve, reject) => {
-    dotenv.load({ path: '.env' });
+    dotenv.load({ path: '../../.env' });
     mongoose.Promise = require('bluebird');
     mongoose.connect(process.env.MONGODB_URI_TEST);
     mongoose.connection.on('error', () => {

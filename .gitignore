@@ -8,7 +8,7 @@ pids
 *.pid
 *.seed
 
-# API keys and secrets
+# API keys (and secrets)
 .env
 
 # Dependency directory

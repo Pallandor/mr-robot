@@ -1,0 +1,11 @@
+language: node_js
+
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
+
+services:
+  - mongodb
+
+node_js:
+  - "6"
