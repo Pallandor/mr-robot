@@ -16,6 +16,9 @@ const user = [
   {username: 'melissa'},
 ];
 
-// NOTE: Consider using lodash/merge instead of Object.assign
-exports.getUserUsername = ind => user[ind].username;
-exports.updateUser = (ind, dataObj) => Object.assign({}, user[ind], dataObj);
+/** Expose simple API for mock data interaction **/
+exports.getUsername = ind => user[ind].username;
+exports.getTableId = ind => user[ind].table.id;
+exports.updateUserTable = (ind, tableObj) => user[ind].table = tableObj;
+exports.getTable = ind => user[ind].table;
+exports.getUser = ind => user[ind];
