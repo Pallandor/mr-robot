@@ -19,11 +19,11 @@ exports.connectDB = () =>
 
 exports.clearDB = () =>
   new Promise((resolve, reject) => {
-    Table.remove(err => {
-      if (err) reject(err);
-      Robot.remove(err => {
-        if (err) reject(err);
+    Table.remove(tableErr => {
+      if (tableErr) reject(tableErr);
+      Robot.remove(robotErr => {
+        if (robotErr) reject(robotErr);
         resolve();
-      })
+      });
     });
   });
