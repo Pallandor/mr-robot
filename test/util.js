@@ -12,7 +12,7 @@ exports.connectDB = () =>
       dotenv.load({ path: '.env' });
     }
     mongoose.Promise = require('bluebird');
-    mongoose.connect(process.env.MONGODB_URI_TEST);
+    mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
     mongoose.connection.on('error', () => {
       console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
       reject();
