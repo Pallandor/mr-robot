@@ -1,9 +1,16 @@
 # mr-robot
 Interactive turn-based battleships style game (but with robots!)
-Hosted on Node.js CLI client.
+(To be) hosted on Node.js CLI client with Node/Express API and MongoDB/Mongoose
+to manage game state.
 
-(Modify readme more later!)
-
+*Currently in progress* :penguin:
+<!-- (Modify readme more later!) -->
+### Tests
+```bash
+npm run lint
+npm run test
+```
+<!--
 ## Installation
 
 ```bash
@@ -29,4 +36,4 @@ npm run test
 
 Webdriver automation occurs on
 firefox browser instance in testing.
-(Include more info!)
+(Include more info!) -->
