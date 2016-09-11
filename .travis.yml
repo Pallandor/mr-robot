@@ -1,11 +1,15 @@
 language: node_js
-
 before_script:
-  - sleep 15
-  - mongo mydb_test --eval 'db.addUser("travis", "test");'
-
+- sleep 15
+- mongo mydb_test --eval 'db.addUser("travis", "test");'
 services:
-  - mongodb
-
+- mongodb
 node_js:
-  - "6"
+- '6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: lVx/F3yDMP2Wu/XUBvzdSQwzDsWEeIe4yp9XX13f85p05tGgITVwzEPHjSAZEqZ9b083GcHRFBEhV/cVg/uz8BkJrXUaK3R/r4sb+ZGEHqvBf7zTQpC2c20C0e9BT7EG7MAbLZv46FttGMzOaSFlBG8mT8QVROHIuO8m8YGnNep/m+uxq7ND25R+itY8b1t4+YiIwkpeXX79H+wtrvZrQSMgg18PI9yE/PUOQ9vo96HJcwsxa21E33bsv4P38BUcthtf+LBN7hg+dZ2QJkyVWJoqtAra0IheImgvMLJf+SsUKglpPnkIKfB0lsB9W43ONR0pfwZN7pYj06AgM5ARWNVfIzwn7feGLGge1UBXhg3hyy4ImUTgITQELKlk5MCY9Rxs6Sig8ba/CUMBCGKj8ooa/96n1KbNCwVWfWwMZt/BZ/ZsaJ+4nKJTn05YOeSl3d7hlh16upA74QTPKlsT08rLyhmtSyd1RnGbVemWtr0gWuwQn1vJs8fldcuQwytTkHfxzRjUSkTt5uq1X1hJRyaFLwFV8VIBTL360uwJt8nECFiINaOKAUwn2jqtDoVmBXG5k4V/94ucICOUMlpcdLb0G/pTwpUnbg66Xx4AY7AuZy0Db0yzf4PnABjDrtqRuib1XR0Xzlm+j1OugMjIKnHt4M9oeL4SLNbz1StYEc0=
+  app: mr-robot-bmg
+  on:
+    repo: Pallandor/mr-robot

@@ -3,6 +3,8 @@ Multiplayer turn-based battleships style game (but with robots!)
 (To be) hosted with Node/Express API and MongoDB/Mongoose, with Node CLI client.
 
 *Currently in progress* :penguin:
+
+![Travis CI Build Status](the_image_url_here)
 <!-- (Modify readme more later!) -->
 ### Tests
 ```bash
