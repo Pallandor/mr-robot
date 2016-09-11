@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint '**/*.js' --ignore-path .gitignore",
+    "dev:server": "NODE_ENV=development node server/index.js",
+    "dev:test": "npm run lint && NODE_ENV=development mocha test/index.js --timeout 5000",
     "test": "npm run lint && mocha test/index.js --timeout 5000"
   },
   "author": "pallandor",

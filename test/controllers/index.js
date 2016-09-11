@@ -8,7 +8,7 @@ module.exports = () => {
   describe('MongoDB Controllers', () => {
     before(done => {
       util.connectDB()
-        .then(util.clearDB())
+        .then(() => util.clearDB())
         .then(() => done())
         .catch(err => done(err));
     });

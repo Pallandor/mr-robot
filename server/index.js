@@ -6,8 +6,10 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const winston = require('winston');
 
-/** Load environment variables from .env file **/
-dotenv.load({ path: '.env' });
+/** Load environment variables from .env file if dev mode **/
+if (process.env.NODE_ENV === 'development') {
+  dotenv.load({ path: '.env' });
+}
 
 /** Create Express Server **/
 const app = express();
