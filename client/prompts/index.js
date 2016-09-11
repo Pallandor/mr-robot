@@ -1,10 +1,9 @@
 'use strict';
 
-const bluebird = require('bluebird');
+const Promise = require('bluebird');
 const api = require('../api');
 const userStore = require('../store');
 const messages = require('./messages');
-const helpers = require('../helpers');
 
 const prompt = require('prompt');
 prompt.message = messages.gamePrompt;
@@ -24,9 +23,9 @@ exports.promptUsername = () =>
     console.log(messages.welcome);
     prompt.get(usernameSchema, (err, result) => {
       if (err) {
-        console.log(messages.usernameOrApiError)
+        console.log(messages.usernameOrApiError);
         reject(err);
-      };
+      }
       console.log(messages.loading);
       api.postUsername(result.username)
         .then(response => {

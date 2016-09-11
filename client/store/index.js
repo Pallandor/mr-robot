@@ -13,7 +13,7 @@ const user = {
 /** Game state selectors **/
 exports.getUsername = () => user.username;
 exports.getTableId = () => user.tableId;
-exports.getLatestCommand = () => user.commandHitory[user.commandHitory.length-1];
+exports.getLatestCommand = () => user.commandHistory[user.commandHitory.length - 1];
 
 exports.addTableId = tableId => {user.tableId = tableId;};
 exports.addUsername = username => {user.username = username;};
