@@ -2,14 +2,13 @@
 
 const expect = require('chai').expect;
 const mock = require('../mock');
-const Robot = require('../../server/models/Robot');
 const robotController = require('../../server/controllers/robot');
 
 module.exports = () => {
   describe('Robot Controllers', () => {
     describe('# findRobotByMaster', () => {
       it('should should find an existing robot by username', done => {
-        let expectedRobotId = mock.getTable(4).robots[0];
+        const expectedRobotId = mock.getTable(4).robots[0];
         robotController.findRobotByMaster(mock.getUsername(4))
           .then(selectedRobot => {
             expect(selectedRobot.master).to.equal(mock.getUsername(4));
@@ -27,4 +26,4 @@ module.exports = () => {
       });
     });
   });
-}
+};

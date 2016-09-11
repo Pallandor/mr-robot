@@ -19,6 +19,6 @@ const user = [
 /** Expose simple API for mock data interaction **/
 exports.getUsername = ind => user[ind].username;
 exports.getTableId = ind => user[ind].table.id;
-exports.updateUserTable = (ind, tableObj) => user[ind].table = tableObj;
+exports.updateUserTable = (ind, tableObj) => {user[ind].table = tableObj;};
 exports.getTable = ind => user[ind].table;
 exports.getUser = ind => user[ind];

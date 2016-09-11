@@ -2,7 +2,6 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-const bluebird = require('bluebird');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const winston = require('winston');

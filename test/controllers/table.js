@@ -14,7 +14,7 @@ module.exports = () => {
           if (err) done(err);
           expect(count).to.equal(0);
           done();
-        })
+        });
       });
       it('should add a new Table (and Robot) for a first new user', done => {
         tableController.getTableByUsername(mock.getUsername(0))
@@ -99,7 +99,7 @@ module.exports = () => {
       it('should return a Table by RobotId', done => {
         tableController.findTableByRobotId(mock.getUser(0).table.robots[0])
           .then(selectedTable => {
-            let expectedTable = mock.getTable(0);
+            const expectedTable = mock.getTable(0);
             expect(selectedTable.id).to.equal(expectedTable.id);
             expect(selectedTable.robots.length).to.equal(expectedTable.robots.length);
             expect(selectedTable.robots).to.include(mock.getUser(0).table.robots[0]);
@@ -107,7 +107,7 @@ module.exports = () => {
           })
           .then(() => tableController.findTableByRobotId(mock.getUser(4).table.robots[0]))
           .then(selectedTable => {
-            let expectedTable = mock.getTable(4);
+            const expectedTable = mock.getTable(4);
             expect(selectedTable.id).to.equal(expectedTable.id);
             expect(selectedTable.robots.length).to.equal(expectedTable.robots.length);
             expect(selectedTable.robots).to.include(mock.getUser(4).table.robots[0]);
@@ -121,7 +121,7 @@ module.exports = () => {
       it('should return either an existing Table if possible', done => {
         tableController.findAvailableTable()
           .then(availableTable => {
-            let expectedTable = mock.getTable(4);
+            const expectedTable = mock.getTable(4);
             expect(availableTable.id).to.equal(expectedTable.id);
             expect(availableTable.robots.length).to.equal(expectedTable.robots.length);
             expect(availableTable.currentUsersTurn).to.equal(expectedTable.currentUsersTurn);
@@ -129,7 +129,7 @@ module.exports = () => {
           })
           .catch(err => done(err));
       });
-    })
+    });
     describe('# createTable', () => {
       it('should create a new Table', done => {
         // NOTE: Need to decouple unit tests from e2e testing!
@@ -144,6 +144,5 @@ module.exports = () => {
         done();
       });
     });
-
   });
 };
