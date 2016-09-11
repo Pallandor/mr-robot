@@ -2,7 +2,6 @@
 
 const tableController = require('../controllers/table');
 
-// NOTE: Use of next()
 exports.postUsername = (req, res) => {
   return tableController.getTableByUsername(req.body.username)
       .then(selectedTable => res.status(200).json({
