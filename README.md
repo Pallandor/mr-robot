@@ -1,5 +1,5 @@
 # mr-robot
-Interactive turn-based battleships style game (but with robots!)
+Multiplayer turn-based battleships style game (but with robots!)
 (To be) hosted on Node.js CLI client with Node/Express API and MongoDB/Mongoose
 to manage game state.
 

@@ -2,6 +2,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const bluebird = require('bluebird');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const winston = require('winston');
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 /** Connect MongoDB **/
+mongoose.Promise = require('bluebird');
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
 mongoose.connection.on('error', () => {
   console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
