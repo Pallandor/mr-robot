@@ -1,7 +1,6 @@
 # mr-robot
 Multiplayer turn-based battleships style game (but with robots!)
-(To be) hosted on Node.js CLI client with Node/Express API and MongoDB/Mongoose
-to manage game state.
+(To be) hosted with Node/Express API and MongoDB/Mongoose, with Node CLI client.
 
 *Currently in progress* :penguin:
 <!-- (Modify readme more later!) -->
