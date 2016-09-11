@@ -3,12 +3,11 @@
 const express = require('express');
 const apiRouter = express.Router();
 
-/** API Controllers (route handlers) **/
-// const robotController = require('../controllers/robot');
-const tableController = require('../controllers/table');
+/** Route handlers **/
+const tableRoutes = require('../routes/table');
 
 /** API routes **/
-apiRouter.post('/username', tableController.postUsername);
+apiRouter.post('/username', tableRoutes.postUsername);
 // apiRouter.get('/command', tableController);
 // apiRouter.post('/command', apiController.getNewYorkTimes);
 
