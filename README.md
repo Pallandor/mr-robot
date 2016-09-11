@@ -4,7 +4,7 @@ Multiplayer turn-based battleships style game (but with robots!)
 
 *Currently in progress* :penguin:
 
-![Travis CI Build Status](the_image_url_here)
+[![Travis CI Build Status](https://travis-ci.org/Pallandor/mr-robot.svg?branch=master)](https://travis-ci.org/Pallandor/mr-robot)
 <!-- (Modify readme more later!) -->
 ### Tests
 ```bash
