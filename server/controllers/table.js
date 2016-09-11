@@ -15,7 +15,7 @@ exports.findTableByRobotId = robotId =>
 exports.findAvailableTable = () =>
   new Promise((resolve, reject) => {
     Table.findOne({$where: 'this.robots.length < this.robotLimit'}, (err, availableTable) => {
-      if (err) reject (err);
+      if (err) reject(err);
       resolve(availableTable);
     });
   });
@@ -38,9 +38,8 @@ exports.addRobotToAvailableTable = (username, robotId) =>
       if (availableTable) {
         availableTable.robots.push(robotId);
         return availableTable.save();
-      } else {
-        return exports.createTable(username, robotId);
       }
+      return exports.createTable(username, robotId);
     });
 
 exports.getTableByUsername = username =>
@@ -48,8 +47,7 @@ exports.getTableByUsername = username =>
     .then(existingRobot => {
       if (existingRobot) {
         return exports.findTableByRobotId(existingRobot.id);
-      } else {
-        return robotController.createRobot(username)
-          .then(createdRobot => exports.addRobotToAvailableTable(username, createdRobot.id));
-        }
-      });
+      }
+      return robotController.createRobot(username)
+        .then(createdRobot => exports.addRobotToAvailableTable(username, createdRobot.id));
+    });
