@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const winston = require('winston');
+const helmet = require('helmet');
 
 /** Load environment variables from .env file if dev mode **/
 if (process.env.NODE_ENV === 'development') {
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 8080;
 
 /** Server config **/
 app.use(bodyParser.json());
+app.use(helmet());
 
 /** Connect MongoDB **/
 mongoose.Promise = require('bluebird');
