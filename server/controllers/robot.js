@@ -6,7 +6,7 @@ const Robot = require('../models/Robot');
 exports.findRobotByMaster = username =>
   new Promise((resolve, reject) => {
     Robot.findOne({master: username}, (err, existingRobot) => {
-      if (err) reject(err); // TODO: Check that reject short circuits ops here
+      if (err) reject(err);
       resolve(existingRobot);
     });
   });

@@ -2,7 +2,7 @@
 
 const tableController = require('../controllers/table');
 
-// TODO: determine whether use next();
+// NOTE: Use of next()
 exports.postUsername = (req, res) => {
   return tableController.getTableByUsername(req.body.username)
       .then(selectedTable => res.status(200).json({
@@ -10,7 +10,7 @@ exports.postUsername = (req, res) => {
         username: req.body.username,
       }))
       .catch(err => {
-        // TODO: rethink error handling (middleware?);
+        // TODO: Rethink error handling
         console.error(err);
         res.sendStatus(500);
       });

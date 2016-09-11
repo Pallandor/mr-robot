@@ -3,9 +3,9 @@
 const mongoose = require('mongoose');
 
 const tableSchema = new mongoose.Schema({
-  dimension: {type: Number, default: 5}, // TODO: Replace dimension default with dbconfig input
-  robots: {type: Array, default: []}, // TODO: Does it need default empty array value? test this!
-  robotLimit: {type: Number, default: 4}, // TODO: Replace with dbconfig val input
+  dimension: {type: Number, default: 5}, // TODO: Replace default with dbconfig val
+  robots: {type: Array, default: []},
+  robotLimit: {type: Number, default: 4}, // TODO: Replace default with dbconfig val
   currentUsersTurn: { type: String, required: true},
 }, { timestamps: true });
 

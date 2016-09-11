@@ -31,7 +31,6 @@ exports.createTable = (username, firstRobotId) =>
     });
   });
 
-// TODO: Fix composed promise here, anti-pattern!
 exports.addRobotToAvailableTable = (username, robotId) =>
   exports.findAvailableTable()
     .then(availableTable => {

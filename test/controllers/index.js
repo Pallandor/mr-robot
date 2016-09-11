@@ -2,7 +2,7 @@
 
 const util = require('../util');
 const installTableControllerTests = require('./table');
-const installRobotControllerTests = require('./Robot');
+const installRobotControllerTests = require('./robot');
 
 module.exports = () => {
   describe('MongoDB Controllers', () => {
