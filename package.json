@@ -8,7 +8,9 @@
     "dev:server": "NODE_ENV=development node server/index.js",
     "dev:client": "NODE_ENV=development node client/index.js",
     "dev:test": "npm run lint && NODE_ENV=development mocha test/index.js --timeout 5000",
-    "test": "npm run lint && mocha test/index.js --timeout 5000"
+    "test": "npm run lint && mocha test/index.js --timeout 5000",
+    "game": "node client/index.js",
+    "start": "node server/index.js"
   },
   "author": "pallandor",
   "license": "MIT",

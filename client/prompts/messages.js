@@ -7,10 +7,10 @@ const dog = emoji.get('dog');
 const bear = emoji.get('bear');
 const hamster = emoji.get('hamster');
 const frog = emoji.get('frog');
-const unicornFace = emoji.get('unicornFace');
+const unicornFace = emoji.get('unicorn_face');
 const bicyclist = emoji.get('bicyclist');
 const bangbang = emoji.get('bangbang');
-const openMouth = emoji.get('openMouth');
+const openMouth = emoji.get('open_mouth');
 
 exports.gamePrompt = `${whale} ${frog} ${hamster}  Mr-Robot-Prompt ${unicornFace} ${bicyclist} ${dog}`;
 exports.welcome = `${whale} ${bear} ${dog}  Welcome! ${bicyclist} ${frog} ${hamster}  Please provide a new or existing username: \n`;
